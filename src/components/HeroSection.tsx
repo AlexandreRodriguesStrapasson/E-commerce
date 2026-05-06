@@ -46,7 +46,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{
-          backgroundImage: 'radial-gradient(circle, #5c2a12 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #7d3d1e 1px, transparent 1px)',
           backgroundSize: '28px 28px',
         }}
       />
@@ -67,7 +67,7 @@ export function HeroSection() {
         <motion.div variants={item} className="flex items-center justify-center gap-4 mb-10">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-500" />
           <span className="text-gold-600 text-xs tracking-[0.5em] uppercase font-display">
-            Artisan Pâtisserie
+            Doces Caseiros
           </span>
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-500" />
         </motion.div>
@@ -75,7 +75,7 @@ export function HeroSection() {
         {/* Headline */}
         <motion.h1
           variants={item}
-          className="font-display text-5xl md:text-6xl lg:text-7xl text-choco-900 leading-tight mb-6"
+          className="font-display text-5xl md:text-6xl lg:text-7xl text-cream-100 leading-tight mb-6"
         >
           Arte em cada detalhe,
           <br />
@@ -85,7 +85,7 @@ export function HeroSection() {
         {/* Subtítulo */}
         <motion.p
           variants={item}
-          className="font-body text-lg md:text-xl text-choco-600 max-w-xl mx-auto mb-14 leading-relaxed"
+          className="font-body text-lg md:text-xl text-choco-200 max-w-xl mx-auto mb-14 leading-relaxed"
         >
           Bolos e doces artesanais criados com ingredientes selecionados para
           tornar cada ocasião verdadeiramente inesquecível.

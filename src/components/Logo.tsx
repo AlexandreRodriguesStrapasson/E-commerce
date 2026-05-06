@@ -17,11 +17,11 @@ export function Logo({
 
   return (
     <div className={`flex flex-col items-center select-none ${className}`}>
-      <span className={`font-display uppercase text-choco-600 ${s.eyebrow}`}>
+      <span className={`font-display uppercase text-gold-600 ${s.eyebrow}`}>
         Confeitaria
       </span>
 
-      <span className={`font-script text-choco-900 leading-none ${s.script}`}>
+      <span className={`font-script text-cream-100 leading-none ${s.script}`}>
         Auri
       </span>
 

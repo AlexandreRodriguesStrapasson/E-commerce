@@ -103,29 +103,25 @@
 /* ─── Base ───────────────────────────────────────────────────────────────── */
 
 @layer base {
-  :root {
-    color-scheme: light;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
   body {
     font-family: var(--font-lato), system-ui, sans-serif;
-    background-color: #fdf8f0;
-    color: #3d1a08;
+    background-color: #200d03;
+    color: #fdf8f0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: #fcd34d;
-    color: #200d03;
+    background-color: #d4af37;
+    color: #100601;
   }
 
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: #f9edd8; }
+  ::-webkit-scrollbar-track { background: #100601; }
   ::-webkit-scrollbar-thumb {
     background: #d4af37;
     border-radius: 999px;
@@ -159,26 +155,25 @@
     animation: shimmer 3s linear infinite;
   }
 
-  /* Fundo gradiente quente */
+  /* Fundo gradiente escuro */
   .bg-warm-gradient {
-    background: linear-gradient(
-      145deg,
-      #fffef9  0%,
-      #fdf8f0 40%,
-      #f9edd8 80%,
-      #fdf6f0 100%
+    background: radial-gradient(
+      ellipse at 35% 25%,
+      #3d1a08 0%,
+      #200d03 55%,
+      #100601 100%
     );
   }
 
-  /* Card estilo glass */
+  /* Card estilo glass — sobre fundo escuro */
   .glass {
-    background: rgba(253, 248, 240, 0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(212, 175, 55, 0.22);
+    background: rgba(61, 26, 8, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
   }
 
-  /* Botão primário */
+  /* Botão primário — dourado sobre fundo escuro */
   .btn-primary {
     display: inline-block;
     padding: 0.875rem 2.5rem;
@@ -186,13 +181,13 @@
     font-size: 0.8125rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    background-color: #3d1a08;
-    color: #fdf8f0;
-    box-shadow: 0 4px 24px -4px rgba(61, 26, 8, 0.12);
+    background-color: #d4af37;
+    color: #100601;
+    box-shadow: 0 4px 20px -4px rgba(212, 175, 55, 0.35);
   }
   .btn-primary:hover {
-    background-color: #5c2a12;
-    box-shadow: 0 12px 48px -8px rgba(61, 26, 8, 0.22);
+    background-color: #f5c842;
+    box-shadow: 0 8px 40px -6px rgba(212, 175, 55, 0.5);
     transform: translateY(-1px);
   }
   .btn-primary:active { transform: translateY(0); }

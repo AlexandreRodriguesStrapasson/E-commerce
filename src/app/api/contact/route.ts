@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+
+export const dynamic = 'force-static'
 import connectDB from '@/lib/mongodb'
 import Contact from '@/lib/models/Contact'
 

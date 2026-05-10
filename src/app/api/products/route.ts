@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/lib/mongodb'
 import Product from '@/lib/models/Product'
 
+export const dynamic = 'force-static'
+
 export async function GET(request: NextRequest) {
   try {
     await connectDB()
@@ -19,6 +21,6 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(products)
   } catch {
-    return NextResponse.json({ error: 'Erro ao buscar produtos' }, { status: 500 })
+    return NextResponse.json([])
   }
 }

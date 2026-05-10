@@ -57,4 +57,5 @@ const handler = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
 })
 
+export const dynamic = 'force-static'
 export { handler as GET, handler as POST }

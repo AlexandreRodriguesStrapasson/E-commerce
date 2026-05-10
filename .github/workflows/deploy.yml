@@ -19,8 +19,12 @@ jobs:
 
       - run: npm ci
 
+      - name: Remover rotas que exigem servidor
+        run: rm -rf src/app/api/auth
+
       - run: npm run build
         env:
+          STATIC_EXPORT: true
           NEXTAUTH_SECRET: placeholder
           NEXTAUTH_URL: https://alexandrerodriguesstrapasson.github.io/E-commerce
 

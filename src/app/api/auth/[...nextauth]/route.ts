@@ -58,4 +58,5 @@ const handler = NextAuth({
 })
 
 export const dynamic = 'force-static'
+export function generateStaticParams() { return [] }
 export { handler as GET, handler as POST }

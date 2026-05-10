@@ -55,8 +55,7 @@ const handler = NextAuth({
     signIn: '/login',
   },
   secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true,
 })
 
-export const dynamic = 'force-static'
-export function generateStaticParams() { return [] }
 export { handler as GET, handler as POST }

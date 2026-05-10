@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server'
-
-export const dynamic = 'force-static'
 import connectDB from '@/lib/mongodb'
 import Product from '@/lib/models/Product'
 

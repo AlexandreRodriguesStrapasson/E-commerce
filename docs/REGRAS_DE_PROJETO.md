@@ -36,7 +36,7 @@ src/
 - Componentes de servidor (sem `'use client'`) são a preferência padrão no App Router.
 - Conexão com o MongoDB sempre via `connectDB()` de `@/lib/mongodb` — nunca instanciar Mongoose diretamente.
 - A verificação de `MONGODB_URI` ocorre dentro de `connectDB()`, nunca no nível do módulo.
-- Todos os route handlers de API devem exportar `export const dynamic = 'force-static'` para compatibilidade com o export estático.
+- Route handlers de API **não devem** ter `export const dynamic = 'force-static'` — o CI remove toda a pasta `src/app/api/` antes do build estático.
 - Tipagem estrita habilitada — proibido uso de `any` salvo casos documentados.
 - Formatação gerenciada pelo Prettier (configurado no projeto).
 
@@ -61,9 +61,9 @@ src/
 ## 6. Deploy
 
 - O deploy é automatizado via **GitHub Actions** a cada push no branch `master`.
-- O workflow gera um export estático (`output: 'export'`) e publica no branch `gh-pages`.
-- O site fica disponível em: `https://alexandrerodriguesstrapasson.github.io/E-commerce/`
-- Funcionalidades que dependem de banco de dados ficam inativas no ambiente estático.
+- O workflow remove `src/app/api/` e gera um export estático (`output: 'export'`) publicado no branch `gh-pages`.
+- O site estático fica disponível em: `https://alexandrerodriguesstrapasson.github.io/E-commerce/`
+- Funcionalidades que dependem de banco de dados (auth, produtos, contato) ficam inativas no ambiente estático.
 - Para o ambiente completo (com DB e auth), usar **Vercel** com as variáveis de ambiente configuradas.
 
 ## 7. Git

@@ -37,18 +37,22 @@
 - Configuração de `output: 'export'` e `basePath: '/E-commerce'` no `next.config.ts`.
 - Workflow GitHub Actions para build e deploy automático no branch `gh-pages`.
 - Correção do `connectDB()` para não lançar erro em nível de módulo (evita crash no build).
-- Adição de `export const dynamic = 'force-static'` em todos os route handlers.
-- Formulários de login e registro exibem mensagem "Em desenvolvimento" enquanto o banco não está configurado.
+
+### 2026-05-10 — Restauração do backend e configuração do banco local
+- Restaurados formulários de login e registro com lógica de autenticação real (NextAuth `signIn`, fetch para `/api/auth/register`).
+- Removido `force-static` de todos os route handlers — CI passou a remover toda a `src/app/api/` antes do build estático.
+- Adicionado `trustHost: true` no NextAuth para compatibilidade com Next.js 16.
+- Banco de dados renomeado de `nilda` para `auri-db`.
+- `NEXTAUTH_URL` adicionado ao `.env.local`.
 
 ---
 
 ## A fazer
 
 ### Curto prazo
-- [ ] Configurar MongoDB Atlas e conectar ao ambiente de produção (Vercel).
-- [ ] Ativar autenticação real (remover bloqueio "Em desenvolvimento").
 - [ ] Executar endpoint `/api/seed` para popular o banco com os produtos iniciais.
 - [ ] Testar fluxo completo: cadastro → login → cardápio → contato.
+- [ ] Configurar MongoDB Atlas e Vercel para ambiente de produção online.
 
 ### Médio prazo
 - [ ] **Carrinho de compras** — estado global de itens selecionados (Context ou Zustand).

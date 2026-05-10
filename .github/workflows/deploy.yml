@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
 
       - name: Remover rotas que exigem servidor
-        run: rm -rf src/app/api/auth
+        run: rm -rf src/app/api
 
       - run: npm run build
         env:
